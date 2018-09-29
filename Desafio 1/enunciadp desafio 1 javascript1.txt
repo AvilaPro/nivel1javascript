@@ -1,0 +1,13 @@
+Enunciado de la tarea 1 de la sección 2699
+
+Usando números aleatorios para las entradas y mensajes en la cónsola para las salidas, realizar las siguientes actividades:
+
+1.- Crear un archivo nuevo JS para resolver el siguiente problema: Una agencia de carros paga a su personal de ventas un salario base de 500.000 Bs. más una comisión de 200.000 Bs. por cada automóvil vendido, más el 10% del valor total de las ventas. Si se tiene como entrada el nombre del vendedor, el número de autos vendidos y el valor total de sus ventas. Se pide calcular e imprimir el salario neto del vendedor.
+
+2.- Crear un archivo nuevo JS para resolver el siguiente problema: La asignatura Introducción a la Computación tiene las siguientes evaluaciones por cada semestre: a.- Tres exámenes parciales de 27 puntos cada uno. b.- Evaluación continua de 9 puntos. c.- Un trabajo práctico de 10 puntos. Se tiene como entrada: Las calificaciones obtenidas por un estudiante, se pide calcular e imprimir. Nota final del estudiante en las escalas de 100 puntos, 20 puntos y 4 puntos respectivamente.
+
+3.- Crear un archivo nuevo JS para resolver el siguiente problema: Una compañía dedicada a la venta de vehículos ofrece a sus clientes el siguiente sistema de pago: Una cuota inicial del 30% del costo del vehículo y la diferencia debe ser cancelada en cuotas mensuales iguales y consecutivas durante 2 años. Cuando un cliente compra un vehículo la compañía requiere un informe que contenga: a.- Nombre del cliente. b.- Cuota inicial. c.- Monto de las cuotas mensuales. Como dato de entrada se tiene nombre del cliente y precio del vehículo.
+
+4.- Crear un archivo nuevo JS para resolver el siguiente problema: Un kiosco de comida rápida desea procesar las ventas del día. Para ello dispone de los siguientes datos: precio del desayuno, almuerzo y cena respectivamente y cantidad de desayunos, almuerzos y cenas vendidos durante el día. Elabore el programa que permita imprimir: ingreso del kiosco por cada tipo de comida (desayuno, almuerzo y cena), Total ingreso del día y promedio de los precios de las comidas.
+
+5.- Crear un archivo HTML que incluyda los 4 archivos JS, que tenga un bloque de Scritp donde haya un comentario sobre el trabajo realizado y mensajes de consola que sirvan de título previo a las salidas de los problemas que se resuelven en los archivos externos
