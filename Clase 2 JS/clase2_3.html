@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var nombre=prompt("Escriba su nombre:")
+		var nota1=parseInt(prompt("introduzca la nota 1:"));
+		var nota2=parseFloat(prompt("introduzca la nota 2:"));
+		var notaFinal=nota1+parseInt(nota2);
+		if(isNaN(nota1) || isNaN(nota2))
+			alert(nombre.toUpperCase(substring(1,1))+nombre.substring(2,nombre.lenght)+" no se puede"+
+				"calcular su nota por un erroren las "+
+				"notas")
+		else{			
+			console.log("Nota 1:"+nota1);
+			console.log("Nota 2:"+nota2);
+			console.log("nota final:"+notaFinal);
+			if(notaFinal>=80)			
+				alert("Esta aprobado");
+			else
+				alert("Esta reprobado");
+		}	
+		//los valores agregados con prompt son variables string
+		//parseInt convierte los datos en variables string a numeros enteros (sin decimales)
+		//parseFloat convierte los datos en variables string en numero con decimales
+
+	</script>
+	
+</body>
+</html>
