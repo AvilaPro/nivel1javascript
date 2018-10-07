@@ -1,0 +1,26 @@
+Enunciado de la tarea 2 de la sección 2699
+
+Crear un archivo JS e incluirlo en un archivo HTML para Resolver el siguiente problema:
+
+Una fabrica produce 3 tipos de franelas cuyos costos son:
+Tipo de Franela               Costo (Bs.)
+         A                    25.000
+         B                    50.000
+         C    		          68.900
+
+Para calcular el precio de venta, si el producto es nacional, tiene un recargo del 25% del costo, pero si es importado, tiene un recargo de 45% del costo. Además, la fábrica tiene la siguiente política de descuento:
+•	Si compra más de 2 docenas el descuento será del 15% del sub total.
+•	Si compra entre 6 y 11 unidades tendrá un descuento del 5% del sub total.
+
+Si se tiene los siguientes datos de un cliente que realiza una compra, asumiendo que se va a procesar una sola compra y que al comprar el cliente puede comprar solo un tipo de franela: nombre del cliente, números de unidades solicitadas, tipo de franela, procedencia (nacional o importado).
+Debe calcular e imprimir: nombre del cliente, número de unidades solicitadas, precio a pagar por la franela (costo + recargo), sub total (precio a pagar x numero de unidades), descuento, Impuesto (12% del subtotal - descuento), el monto a pagar (el sub total + impuesto). 
+
+1.- Leer las entradas usando prompt y confirm. Declare constantes donde sea necesario
+
+2.- Validar que las entradas introducidas por el usuario no esten vacías
+
+3.- Validar que las entradas sean números (en el caso de datos numéricos)
+
+4.- Calcular los montos solicitados en el enunciado
+
+5.- Mostrar las salidas usando un solo alert y varios console.log (para el programador)
