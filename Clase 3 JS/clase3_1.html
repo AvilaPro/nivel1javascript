@@ -1,0 +1,23 @@
+<html>
+	<head>
+	
+	</head>
+	<body>
+		<script>
+			n=Math.ceil(Math.random()*5); /*math.ceil se usa para quedarme con la parte entera mas alta*/
+			console.log("Incrementando:")
+			for (i=1;i<=n;i++){ /*Si aqui al final coloco i+=2 la i incrementara de 2 en 2*/
+				console.log("i:",i)
+			}
+			n=parseInt(prompt("Intr. un numero:"));/*aqui le pregunto al usuario el valor de n*/
+			console.log("Decrementando:")
+			for (i=n;i>0;i--){
+				console.log("i:",i)
+			}
+			
+			for (i=1;i<=n;i++){ /*aqui incrementa pero el valor de n fue ingresado por el usuario alla arriba*/
+				console.log("i:",i)
+			}
+		</script>
+	</body>
+</html>
