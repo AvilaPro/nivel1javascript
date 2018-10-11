@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Documento sin t&iacute;tulo</title>
+
+<script src="js/prototype.js" type="text/javascript"></script>
+<script src="js/effects.js" type="text/javascript"></script>
+<script src="js/fabtabulous.js" type="text/javascript" ></script>
+<script src="js/validation.js" type="text/javascript" ></script>
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+
+<body>
+ 
+<form id="test" action="#" method="post">
+	<fieldset>
+		<legend>Form</legend>
+		<div class="form-row">
+			<div class="field-label"><label for="field1">Nombre</label>:</div>
+			<div class="field-widget"><input name="field1" id="field1" class="required" title="Introduzca el nombre" /></div>
+		</div>
+		<div class="form-row">
+			<div class="field-label"><label for="field8">Contraseña</label>:</div>
+			<div class="field-widget"><input type="password" name="field8" id="field8" class="required validate-password" title="Enter a password greater than 6 characters" /></div>
+		</div>
+		<div class="form-row">
+			<div class="field-label"><label for="field9">Confirm Password</label>:</div>
+			<div class="field-widget"><input type="password" name="field9" id="field9" class="required validate-password-confirm" title="Enter the same password for confirmation" /></div>
+		</div>
+		<div class="form-row">
+			<div class="field-label"><label for="field3">Numero de empleado</label>:</div>
+			<div class="field-label">
+				<input name="field3" id="field3" class="required validate-alphanum" title="Enter your employee number, please use only alphanumeric characters" />		
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="field-label"><label for="field7">Departamento</label>:</div>
+			<div class="field-widget">
+				<select id="field7" name="field7" class="validate-selection" title="Choose your department">
+					<option>Select one...</option>
+					<option>Accounts</option>
+					<option>Human Resources</option>
+					<option>Information Technology</option>
+					<option>Animal Management</option>
+					<option>Ultimate Frisby</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="field-label"><label for="field4">Edad</label>:</div>
+			<div class="field-label"><input name="field4" id="field4" class="validate-number" title="Optional: Enter your age" /> (optional)</div>
+		</div>
+		<div class="form-row">
+			<div class="field-label"><label for="field6">Sexo</label>:</div>
+			<div class="field-label">
+				<input type="radio" name="field6" id="field6-male" value="Male" />Male<br />
+				<input type="radio" name="field6" id="field6-female" value="Female" class="validate-one-required" />Female
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="field-label"><label for="field5">Donation</label>:</div>
+			<div class="field-label">
+					<div id="advice-validate-currency-dollar-field5" class="custom-advice" style="display:none">That $ amount does not compute!</div>
+					<input name="field5" id="field5" class="validate-currency-dollar" title="Enter a dollar amount for donation" /> (optional)
+			</div>
+		</div>
+		<p><a href="#" onclick="$('email-signup').toggle(); return false">Sign me up for the email newletter!</a></p>
+		<div id="email-signup" class="form-row" style="display:none;">
+			<div class="field-label"><label for="field22">Email</label>:</div>
+			<div class="field-widget"><input name="field22" id="field22" class="required validate-email" title="Optional: Enter your email address" /></div>
+		</div>
+	</fieldset>
+	<input type="submit" value="Submit" /> <input type="button" value="Reset" onclick="valid.reset(); return false" />
+					</form>
+					
+	<script type="text/javascript">
+		function formCallback(result, form) {
+			window.status = "valiation callback for form '" + form.id + "': result = " + result;
+		}
+		
+		var valid = new Validation('test', {immediate : true, onFormValidate : formCallback});
+		Validation.addAllThese([
+			['validate-password', 'Your password must be more than 6 characters and not be \'password\' or the same as your name', {
+				minLength : 7,
+				notOneOf : ['password','PASSWORD','1234567','0123456'],
+				notEqualToField : 'field1'
+			}],
+			['validate-password-confirm', 'Your confirmation password does not match your first password, please try again.', {
+				equalToField : 'field8'
+			}]
+		]);
+	</script>
+</body>
+</html>

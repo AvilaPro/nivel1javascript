@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>
+			Ejemplos capitulo 1 Java Script
+		</title>
+		<script language="javascript" src="ejemplo1.js"/></script>
+		<script language="javascript" src="validaciones.js"/></script>
+	</head>
+	<script language="javascript">
+		var calcular_bono= function (nro, monto)
+		{
+			if (nro>0)
+				return monto*0.5;
+			else
+				return monto*0.1;
+		}		
+		var bono= calcular_bono(5,1500);
+		alert("El bono es de "+bono+" bs");
+	</script>
+	<body onload="saludar()">
+		Primera pagina java script
+		<a href="#" onclick="saludar()">Salir</a>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

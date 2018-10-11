@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<title>
+			Ejemplos capitulo 1 Java Script
+		</title>
+		<script language="javascript" src="validacionesjavascript/lib_validaciones.js"/></script>
+	</head>
+
+	<script language="javascript">		
+		function validar_checkbox(check)
+		{
+			if (check.checked == false)
+			{
+				alert("Debe seleccionar la opcion");
+				return false;
+			}else
+				return true;
+		}
+	</script>
+	<script language="javascript">		
+		function validar(form)
+		{
+			if ( esta_vacio(form.cedula,"La cedula es obligatorio"))
+				return false;
+			else
+				if (validarcorreo(form.correo)==false)
+					return false;
+				else
+					if (validar_select(form.ciudad)==false)
+						return false;
+					else
+						if (validar_checkbox(form.condiciones))
+							return true;
+						else
+							return false;
+		}
+	</script>
+	<body >
+		Ejemplo de validaciones
+		<form name="f1" action="" onsubmit="return validar(this)">
+			Cedula <input type="text" name="cedula" onkeypress="return validar_numero(event)"/>
+			Nombre <input type="text" name="nombre" onkeypress="return validarletra(event)"/>
+			Correo <input type="text" name="correo" />
+			Ciudad <select name="ciudad" multiple>
+						<option value="0">Seleccione</option>
+						<option value="1">Barquisimeto</option>
+						<option value="2">Caracas</option>
+					</select>
+			Acepta las condiciones <input type="checkbox" name="condiciones" />
+			<input type="submit" name="btnenviar" value="Enviar"/>
+		</form>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

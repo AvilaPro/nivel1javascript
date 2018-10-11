@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>
+			Ejemplos capitulo 1 Java Script
+		</title>
+		<script language="javascript" src="ejemplo1.js"/></script>
+		<script language="javascript" src="validaciones.js"/></script>
+	</head>
+	<script language="javascript">
+		function calcular_bono()
+		{
+			var nro=prompt("Numero:");
+			var monto=prompt("Monto:");
+			if (nro>0)
+				bono=monto*0.5;
+			else
+				bono=monto*0.1;
+			
+			alert("El bono es de "+bono+" bs");
+		}
+		function mostrar_tecla(tecla)
+		{
+			alert("presion la tecla:"+tecla.key);
+		}
+	</script>
+	<body onload="calcular_bono()">
+		Primera pagina java script
+		<input type="text" onkeypress="mostrar_tecla(event)" />
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

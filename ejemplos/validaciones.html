@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>
+			Ejemplos capitulo 1 Java Script
+		</title>
+		<script language="javascript" src="ejemplo1.js"/></script>
+		<script language="javascript" src="validaciones.js"/></script>
+	</head>
+	<script language="javascript">
+		function validar(form)
+		{
+			if ( true )
+				alert("Error ....");
+			else
+				form.submit();
+		}
+	</script>
+	<body >
+		Ejemplo de validaciones
+		<form name="f1" action="">
+			Cedula <input type="text" name="cedula" />
+			Nombre <input type="text" name="nombre" />
+			<input type="button" name="btnenviar" value="Enviar" onclick="validar(this.form)"/>
+		</form>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

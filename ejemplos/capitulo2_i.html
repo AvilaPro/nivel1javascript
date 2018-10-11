@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>
+			Ejemplos capitulo 1 Java Script
+		</title>
+		<script language="javascript" src="ejemplo1.js"/></script>
+		<script language="javascript" src="validaciones.js"/></script>
+	</head>
+	<script language="javascript">
+		var total_nota=0;
+		var nro=0;		
+		do
+		{
+			var nota=parseInt(prompt("Introduzca la nota del alumno "+(nro+1)));
+			if (isNaN(nota))
+				alert("No introdujo una nota válida");
+			else
+			{
+				total_nota+=parseFloat(nota);
+				nro_alumnos++;
+			}
+		}while (confirm("Desea registrar otra nota?"));
+		if (nro_alumnos>0)
+		{
+			promedio=total_nota/nro_alumnos;
+			alert("Se registraron "+nro_alumnos+". El promedio es:"+promedio);
+		}else
+			alert("No se registraron notas");	
+	</script>
+	<body>
+		Primera pagina java script
+	</body>
+</html>

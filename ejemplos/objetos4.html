@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+			Ejemplos capitulo 1 Java Script
+		</title>
+	</head>
+	<script language="javascript">	
+
+		function esconder(objeto){
+			$(objeto).hide();
+		  }
+	
+		function prueba(){
+		  $("p").click(esconder(this));
+		}
+	
+		$(document).ready(prueba);
+	
+		var alumnos =
+		[
+			{
+				"nombre":"jose",
+				"nota":15
+			},
+			{
+				"nombre":"maria",
+				"nota":17
+			}			
+		];
+		alert("La nota del primer alumno fue "+alumnos[0].nota);
+		alert("El nombre del segundo alumno es "+alumnos[1].nombre);
+	</script>
+	<body >
+		Ejemplo de validaciones
+		
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

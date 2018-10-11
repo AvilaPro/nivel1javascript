@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Documento sin t&iacute;tulo</title>
+</head>
+<script language="javascript" src="lib_validaciones.js">
+
+</script>
+<script language="javascript">
+	function validar()
+	{
+		if (form1.txtnombre.value=="")
+		{
+			alert("Debe escribir el nombre");
+			form1.txtnombre.focus();
+		}else
+			form1.submit();
+	}
+</script>
+
+<body>
+<form action="procesar.php" method="post" name="form1">
+    <p>Nombre
+  <input name="txtnombre" type="text" id="txtnombre" onkeypress="return validarletra(event)" />
+      Edad <input name="txtedad" type="text" id="txtedad" onkeypress="return validarnumero(event)" />
+      <input name="btnenviar" type="button" id="btnenviar" value="Enviar" onclick="validar()" />
+    </p>
+
+</form>
+</body>
+</html>

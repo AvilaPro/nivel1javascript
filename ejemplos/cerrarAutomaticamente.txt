@@ -1,0 +1,19 @@
+<script>
+var warning = 10;
+var timeout = 30;
+var current = 0;
+
+function getSecs() {
+    current = current + 1;
+    if (current == warning)
+    {
+        window.alert('Se va a cerrar.');
+    }
+    if (current == timeout - 10) {
+
+        window.location='info.php';
+    }
+    window.setTimeout('getSecs()',1000);
+}
+getSecs();
+</script>

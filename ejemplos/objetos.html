@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+			Ejemplos capitulo 1 Java Script
+		</title>
+	</head>
+	<script language="javascript">		
+		var objeto=
+		{
+			"nombre":"jose luis",
+			"apellido":"rojas dellan",
+			"edad":34,
+			"saludar": function ()
+						{
+							alert("Mi nombre es "+this.nombre);
+						},
+			"calcular": function (monto)
+						{
+							if (this.edad>=18)
+								return monto*0.1;
+							else
+								return monto*0.25;
+						}
+		}
+		objeto.saludar();
+		alert("El monto es "+objeto.calcular(2500));
+	</script>
+	<body >
+		Ejemplo de validaciones
+		
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

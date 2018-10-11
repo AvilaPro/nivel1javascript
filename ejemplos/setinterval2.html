@@ -1,0 +1,50 @@
+  <html>
+	<head>
+		<title>
+			Ejemplos capitulo 1 Java Script
+		</title>
+	</head>
+	<script language="javascript">
+		var timer;
+		var contador=0;
+		function activar()
+		{
+			timer=window.setInterval('saludar()',5000);
+			alert("Se activo el reloj");
+		}
+		function desactivar()
+		{
+			clearInterval(timer);
+		}
+		function saludar()
+		{
+			contador++;
+			alert("Se ha ejecutado "+contador+" veces");
+		}
+	</script>
+	<body >
+		<input type="button" value="Activar" onclick="activar()" />
+		<input type="button" value="Desactivar" onclick="desactivar()" />
+	</body>
+</html>
+
+
+<script>
+/*var warning = 10;
+var timeout = 30;
+var current = 0;
+
+function getSecs() {
+    current = current + 1;
+    if (current == warning)
+    {
+        window.alert('Se va a cerrar.');
+    }
+    if (current == timeout - 10) {
+
+        window.location='info.php';
+    }
+    window.setTimeout('getSecs()',1000);
+}
+getSecs();*/
+</script>

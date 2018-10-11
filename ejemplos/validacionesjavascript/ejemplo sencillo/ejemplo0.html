@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Documento sin t&iacute;tulo</title>
+
+<script src="js/prototype.js" type="text/javascript"></script>
+<script src="js/effects.js" type="text/javascript"></script>
+<script src="js/fabtabulous.js" type="text/javascript" ></script>
+<script src="js/validation.js" type="text/javascript" ></script>
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+
+<!--
+Lo que se debe es cambiar el atributo class de la etiqueta input de cada campo. Los posibles valores son:
+
+-required: campo obligatorio
+-validate-number: Por favor escriba un numero valido para este campo
+-validate-digits:Por favor escriba solo numeros en este campo. Evite espacios en blanco, comas o puntos.
+-validate-alpha:Por favor introduzca solo letras(a-z) en este campo.
+-validate-alphanum:Por favor solo use letras (a-z) o numeros (0-9) para este campos. No se permiten espacios en blanco.
+-validate-date:Por favor introduzca una fecha valida.
+-validate-email:Por favor escriba una direccion de correo valida. Por ejemplo fred@domain.com .
+-validate-url:Please enter a valid URL.
+-validate-date-au:Por favor escriba una fecha valida: dd/mm/yyyy. Por ejemplo 17/03/2006 para el 17 de mayo, 2006.
+-validate-currency-dollar:Por favor escriba un monto $ valido. Por ejemplo $100.00
+-validate-selection:Por favor seleccione un elemento (para listas/menus)
+-validate-one-required: Por favor seleccione una de las opciones (para los options)
+
+Si no se coloca nada el campo no es obligatorio ni tendra ninguna validacion. Los mensajes de error estan el la libreria validation.js
+
+-->
+<form id="test" action="" method="post">
+	<fieldset>
+		<legend>Datos del cliente</legend>
+		<div class="form-row">
+			<div class="field-label"><label for="field1">Nombre (Obligatorio) </label>:</div>
+			<div class="field-widget"><input name="field1" id="field1" class="required validate-alpha" title="Introduzca el nombre" /></div>
+		</div>
+		<div class="form-row">
+			<div class="field-label"><label for="field2">Direccion (Obligatorio) </label>:</div>
+			<div class="field-widget"><input name="field2" id="field2" class="required" title="Introduzca la direccion" /></div>
+		</div>
+		<div class="form-row">
+			<div class="field-label"><label for="field3">Telefono (Opcional) </label>:</div>
+			<div class="field-widget"><input name="field3" id="field3" class="validate-digits" title="Introduzca el telefono" /></div>
+		</div>
+	</fieldset>
+	<input type="submit" value="Guardar" /> <input type="button" value="Cancelar" onclick="valid.reset(); return false" />
+</form>
+					
+<script type="text/javascript">
+	function formCallback(result, form) {
+		window.status = "valiation callback for form '" + form.id + "': result = " + result;
+	}
+	
+	var valid = new Validation('test', {immediate : true, onFormValidate : formCallback});
+	
+</script>
+
+</body>
+</html>

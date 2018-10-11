@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>
+			Ejemplos capitulo 1 Java Script
+		</title>
+		<script language="javascript" src="ejemplo1.js"/></script>
+		<script language="javascript" src="validaciones.js"/></script>
+	</head>
+	<script language="javascript">
+		// codigo de ejecucion directa
+		var nro_alumnos=prompt("Introduzca el numero de alumnos:");
+		var total_nota=0;
+		
+		for (i=1;i<=nro_alumnos;i++)
+		{
+			var nota=parseFloat(prompt("Introduzca la nota del alumno "+i));
+			total_nota+=nota;
+		}
+		promedio=total_nota/nro_alumnos;
+		alert("El promedio de la seccion:"+promedio);
+		
+	</script>
+	<body>
+		Primera pagina java script
+	</body>
+</html>
