@@ -1,0 +1,13 @@
+Enunciado de la tarea 3 de la sección 2699
+
+Realizar las siguientes actividades:
+
+1.- Colocar el código de cada uno de los ejercicios realizados en el desafío 1 en una función (cada ejercicio en una función por separado) y colocar todas las funciones en un archivo JS
+
+2.- Internamente en cada función, crear un ciclo For que haga que se repita N veces el algoritmo. El 2 ejercicios hacer que el valor de N sea aleatorio y en otros hacer que el valor de N sea solicitado al usuario. Modificar la lectura de los datos para que se le muestre al usuario de cual iteración se estan procesando datos (Por ejemplo, Introduzca Nombre del Alumno 1 de 5).
+
+3.- Usando If anidados, validar las entradas del usuario para que no se procesen los datos si las entradas no son válidas
+
+4.- En el archivo index, incluir el archivo JS que contiene las funciones. Colocar 4 hipervínculos y programar el evento onclick de cada hipervínculo, de modo que cada hipervínculo ejecute una función distinta.
+
+5.- Programar que si el usuario hace click por segunda vez sobre un hipervínculo, la página le indique al usuario que ya esa función fue ejecutada y preguntarle si desea ejecutarla otra vez (usar variables globales booleanas y confirm)
