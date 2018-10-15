@@ -10,16 +10,35 @@ var be=0;
 var c=0;
 var ca=0;
 var cb=0;
-var da,db,dc,de,df,dg = 0;
-
-
+var da=0;
+var db=0;
+var dc=0;
+var de=0;
+var df=0;
+var dg=0;
+var cont1=0;
+var cont2=0;
+var cont3=0;
+var cont4=0;
 
 function desafio1_1(){
 	n=Math.ceil(Math.random()*3);
 	console.log("n: " +n);
+	cont1=cont1+1;
+	console.log("cont desafio1:" +cont1);
+	if (cont1>1){
+		if(confirm("Ya se ejecuto esta funcion. Desea volver a hacerlo?")){
+			console.log("contador va en: " +cont1);
+		}
+		else{
+			alert("HASTA LUEGO");
+			console.log(cosssto);
+		}
+	}
 	for(i=1;i<=n;i++){
 		console.log("i: ",i);
 		funa: do{
+			a=0;
 			var nombre=prompt("Ingrese el nombre del vendedor " +i+ " :");
 			if(nombre==null){
 				if(confirm("Esta seguro que desea salir?")){
@@ -35,12 +54,17 @@ function desafio1_1(){
 					continue funa;
 				}
 				else
-					if(!isNaN(nombre))
+					if(!isNaN(nombre)){
 						alert("Debe escribir un nombre real, no numeros\n Usted escribio: "+nombre);
-						else
+						continue funa;
+					}
+					else
+						if(isNaN(nombre)){
 							a=a+1;
+						}
 		}while(a<1)
 		funaa: do{
+			aa=0;
 			var num=parseInt(prompt("Ingrese el numero de ventas que hizo " +nombre+ " :"));
 			if(num==null){
 				if(confirm("Esta seguro que desea salir?")){
@@ -56,13 +80,18 @@ function desafio1_1(){
 					continue funaa;
 				}
 				else
-					if(isNaN(num))
+					if(isNaN(num)){
 						alert("Debe escribir un nombre real, no letras\n Usted escribio: "+num);
-						else
+						continue funaa;
+					}
+					else
+						if(!isNaN(num)){
 							aa=aa+1;
+						}
 		}while(aa<1)	
 		var subtotal=num*200000;
 		funab: do{
+			ab=0;
 			var valor_total=parseFloat(prompt("Ingrese el valor total de ventas que hizo " +nombre+ " :"));
 			if(valor_total==null){
 				if(confirm("Esta seguro que desea salir?")){
@@ -78,10 +107,14 @@ function desafio1_1(){
 					continue funab;
 				}
 				else
-					if(isNaN(valor_total))
+					if(isNaN(valor_total)){
 						alert("Debe escribir un nombre real, no letras\n Usted escribio: "+valor_total);
+						continue funab;
+					}
 						else
-							ab=ab+1;
+							if(!isNaN(valor_total)){
+								ab=ab+1;
+							}
 		}while(ab<1)	
 		comision=valor_total*0.1
 		total=500000+subtotal+comision;
@@ -92,12 +125,23 @@ function desafio1_1(){
 		console.log("Comision por el total de sus ventas: " +comision);
 		console.log("total :" +total)
 		alert("el salario neto de " +nombre+" es "+total+ " BsS");
-
 	}
 }
 
+
 function desafio1_2(){
 	funb: do{
+		cont2=cont2+1;
+		console.log("cont desafio2:" +cont2);
+		if (cont2>1){
+			if(confirm("Ya se ejecuto esta funcion. Desea volver a hacerlo?")){
+				console.log("contador va en: " +cont2);
+			}
+			else{
+				alert("HASTA LUEGO");
+				console.log(cosssto);
+			}
+		}
 		n=parseInt(prompt("Ingrese el numero de estudiantes a los que se le evaluara el promedio:"));
 		console.log("numero de estudiantes: "+n);
 		if(n==null){
@@ -114,9 +158,12 @@ function desafio1_2(){
 				continue funb;
 			}
 			else
-				if(isNaN(n))
+				if(isNaN(n)){
 					alert("Debes introducir un Numero");
+					continue funb;
+				}
 					else
+						if(!isNaN(n))
 						b=b+1;
 	}while(b<1)
 	for(i=1;i<=n;i++){
@@ -147,6 +194,7 @@ function desafio1_2(){
 							continue funba;
 						}
 						else
+							if(!isNaN(nota1))
 							ba=ba+1;
 		}while(ba<1)
 		fb: do{
@@ -176,6 +224,7 @@ function desafio1_2(){
 							continue fb;
 						}
 						else
+							if(!isNaN(nota2))
 							bb=bb+1;		
 		}while(bb<1)
 		funbc: do{
@@ -200,9 +249,12 @@ function desafio1_2(){
 							continue funbc;
 						}
 						else
-							if(isNaN(nota3))
+							if(isNaN(nota3)){
 								alert("Debes introducir un Numero");
+								continue funbc;
+							}
 								else
+									if(!isNaN(nota3))
 									bc=bc+1;
 		}while(bc<1)
 		funbd: do{
@@ -227,9 +279,12 @@ function desafio1_2(){
 							continue funbd;
 						}
 						else
-							if(isNaN(evalcont))
+							if(isNaN(evalcont)){
 								alert("Debes introducir un Numero");
+								continue funbd;
+							}
 								else
+									if(!isNaN(evalcont))
 									bd=bd+1;
 		}while(bd<1)
 		funbe: do{
@@ -254,9 +309,12 @@ function desafio1_2(){
 							continue funbe;
 						}
 						else
-							if(isNaN(trabpract))
+							if(isNaN(trabpract)){
 								alert("Debes introducir un Numero");
+								continue funbe;
+							}
 								else
+									if(!isNaN(trabpract))
 									be=be+1;
 		}while(be<1)
 		notafinal=nota1+nota2+nota3+evalcont+trabpract;
@@ -276,6 +334,17 @@ function desafio1_2(){
 
 function desafio1_3(){
 	func: do{
+		cont3=cont3+1;
+		console.log("cont desafio3:" +cont3);
+		if (cont3>1){
+			if(confirm("Ya se ejecuto esta funcion. Desea volver a hacerlo?")){
+				console.log("contador va en: " +cont3);
+			}
+			else{
+				alert("HASTA LUEGO");
+				console.log(cosssto);
+			}
+		}
 		n=parseInt(prompt("Ingrese el numero de clientes a los que se les hara sus calculos:"));
 		console.log("numero de estudiantes: "+n);
 		if(n==null){
@@ -292,9 +361,12 @@ function desafio1_3(){
 				continue func;
 			}
 			else
-				if(isNaN(n))
+				if(isNaN(n)){
 					alert("Debes introducir un Numero");
+					continue func;
+				}
 					else
+						if(!isNaN(n))
 						c=c+1;
 	}while(c<1)
 	for(i=1;i<=n;i++){
@@ -314,9 +386,12 @@ function desafio1_3(){
 					continue funca;
 				}
 				else
-					if(!isNaN(cliente))
+					if(!isNaN(cliente)){
 						alert("Debe escribir un nombre real, no numeros\n Usted escribio: "+cliente);
+						continue funca;
+					}
 						else
+							if(isNaN(cliente))
 							ca=ca+1;
 		}while(ca<1)
 		funcb: do{
@@ -336,9 +411,12 @@ function desafio1_3(){
 					continue funcb;
 				}
 				else
-					if(isNaN(costo))
+					if(isNaN(costo)){
 						alert("Debes introducir un Numero");
+						continue funcb;
+					}
 						else
+							if(!isNaN(costo))
 							cb=cb+1;
 		}while(cb<1)
 		inicial=costo*0.3;
@@ -354,8 +432,20 @@ function desafio1_3(){
 function desafio1_4(){
 	n=Math.ceil(Math.random()*3);
 	console.log("n: " +n);
+	cont4=cont4+1;
+		console.log("cont desafio4:" +cont4);
+		if (cont4>1){
+			if(confirm("Ya se ejecuto esta funcion. Desea volver a hacerlo?")){
+				console.log("contador va en: " +cont4);
+			}
+			else{
+				alert("HASTA LUEGO");
+				console.log(cosssto);
+			}
+		}
 	for(i=1;i<=n;i++){
 		funda: do{
+			da=0;
 			des=parseFloat(prompt("Ingrese el costo del desayuno:"));
 			console.log("costo del desayuno : " +des);
 			if(des==null){
@@ -372,12 +462,16 @@ function desafio1_4(){
 					continue funda;
 				}
 				else
-					if(isNaN(des))
+					if(isNaN(des)){
 						alert("Debes introducir un Numero");
+						continue funda;
+					}
 						else
+							if(!isNaN(des))
 							da=da+1;
 		}while(da<1)
 		fundb: do{
+			db=0;
 			numd=parseFloat(prompt("Ingrese el numero de desayunos vendidos:"));
 			console.log("num desay vendidos : " +numd);
 			if(numd==null){
@@ -394,12 +488,16 @@ function desafio1_4(){
 					continue fundb;
 				}
 				else
-					if(isNaN(numd))
+					if(isNaN(numd)){
 						alert("Debes introducir un Numero");
+						continue fundb;
+					}
 						else
+							if(!isNaN(numd))
 							db=db+1;
 		}while(db<1)
 		fundc: do{
+			dc=0;
 			alm=parseFloat(prompt("Ingrese el costo del almuerzo:"));
 			console.log("costo almuerzo : " +alm);
 			if(alm==null){
@@ -416,12 +514,16 @@ function desafio1_4(){
 					continue fundc;
 				}
 				else
-					if(isNaN(alm))
+					if(isNaN(alm)){
 						alert("Debes introducir un Numero");
+						continue fundc;
+					}
 						else
+							if(!isNaN(alm))
 							dc=dc+1;
 		}while(dc<1)
 		funde: do{
+			de=0;
 			numa=parseFloat(prompt("Ingrese el numero de almuerzos vendidos:"));
 			console.log("num almuerz vendidos : " +numa);
 			if(numa==null){
@@ -438,12 +540,16 @@ function desafio1_4(){
 					continue funde;
 				}
 				else
-					if(isNaN(numa))
+					if(isNaN(numa)){
 						alert("Debes introducir un Numero");
-						else
-							de=de+1;
+						continue funde;
+					}
+					else
+						if(!isNaN(numa))
+						de=de+1;
 		}while(de<1)
 		fundf: do{
+			df=0;
 			cen=parseFloat(prompt("Ingrese el costo de la cena:"));
 			console.log("cosoto cena : " +cen);
 			if(cen==null){
@@ -460,12 +566,16 @@ function desafio1_4(){
 					continue fundf;
 				}
 				else
-					if(isNaN(cen))
+					if(isNaN(cen)){
 						alert("Debes introducir un Numero");
-						else
-							df=df+1;
+						continue fundf;
+					}
+					else
+						if(!isNaN(cen))
+						df=df+1;
 		}while(df<1)
 		fundg: do{
+			dg=0;
 			numc=parseFloat(prompt("Ingrese el numero de cenas vendidos:"));
 			console.log("num cenas vendidos : " +numc);
 			if(numc==null){
@@ -482,9 +592,12 @@ function desafio1_4(){
 					continue fundg;
 				}
 				else
-					if(isNaN(numc))
+					if(isNaN(numc)){
 						alert("Debes introducir un Numero");
+						continue fundg;
+					}
 						else
+							if(!isNaN(numc))
 							dg=dg+1;
 		}while(dg<1)
 		ingd=des*numd;
