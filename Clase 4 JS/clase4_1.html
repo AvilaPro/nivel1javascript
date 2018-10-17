@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>clase 4_1</title>
+</head>
+<body>
+	<a href="#" onclick="info()">Informacion</a>
+	<a href="#" onclick="ir()">Ir a</a>
+	<a href="#" onclick="window.print()">Imprimir</a>
+	<a href="#" onclick="ir2()">Ir a 2</a>
+	<input type="button" onclick="abrir_pop_up()" name="Imprimir" value="PopUp" />
+	<input type="button" onclick="window.print()" name="Imprimir" value="Imprimir" />
+	<script type="text/javascript">
+		
+		function info(){
+			alert("Ancho de pantalla: "+window.screen.width+
+				"\nAlto de la pantalla: "+window.screen.height+
+				"\nEn linea :"+window.navigator.onLine+
+				"\nIdioma del navegador: "+navigator.language+
+				"\nSistema Operativo: "+navigator.platform);
+		}
+		function ir(){
+			web=prompt("a cual pagina desea ir?");
+			if(!(web=="" || web==null))
+				window.location="http://"+web;
+		}
+		function ir2(){
+			web=prompt("a cual pagina desea ir?");
+			if(!(web=="" || web==null))
+				window.open("http://"+web,"","width=500");
+		}
+		function abrir_pop_up(){
+			let x="width=500,height=200";
+			window.open("maqueta.html","",x);
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<a href="#" onclick="info()">Informacion</a> |
+		<a href="#" onclick="ir()">Ir a </a> |
+		<a href="#" onclick="window.print()">Imprimir</a> |
+		<a href="#" onclick="abrir_pop_up()">Abrir</a> |
+		<input 
+			type="button" 
+			onclick="window.print()" 
+			value="Imprimir" />
+		<script>
+			/*
+			window.moveTo(0,0);
+			
+			function listo(){
+				if (confirm("Esta listo?")){
+					window.opener.location="http://cadif1.com"
+					window.close();
+				}
+			}
+			*/
+		
+			function abrir_pop_up(){
+				let x="left=200,top=500,width="+
+					(screen.width-250)+",height=200";
+				window.open('clase4_1_1.html',"",x)
+			}
+		
+			function info(){
+				var prompt=true;
+				{
+					var a=10;
+				}
+				window.prompt("hola "+a)
+				alert("Ancho de la pantalla:"+window.screen.width+
+					  "\nAlto de la pantalla:"+window.screen.height+
+					  "\nEn línea: "+window.navigator.onLine+
+					  "\nIdioma del navegador:"+navigator.language+
+					  "\nSistema operativo:"+navigator.platform);
+			}	
+			function ir(){
+				web=prompt("a cuál página desea ir?");
+				if (!(web=="" || web==null))
+					window.open("http://"+web,"","width=500");				
+			}
+		</script>
+	</body>
+</html>

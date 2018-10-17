@@ -1,0 +1,37 @@
+<!DOCTYPE>
+<html>
+	<head>
+	
+	</head>
+	<body onload="activar()" onclick="activar()">
+		Practica de SetTimeout
+		<script>
+			var t1,t2,t3;
+			function verificar(){
+				if (window.navigator.onLine)
+					window.document.bgColor="white";
+				else
+					window.document.bgColor="yellow";
+			}
+			function preguntar(){
+				if (confirm("Desea extender el tiempo?")){
+					activar();
+				}
+			}
+			function activar(){
+				if (t1!=undefined){
+					window.clearTimeout(t1);
+					window.clearTimeout(t2);
+					window.clearInterval(t3);
+				}
+				t3=window.setInterval("verificar()",2000);
+				t1=window.setTimeout('cerrar()',10000)
+				t2=window.setTimeout('preguntar()',5000)
+			}
+			function cerrar(){
+				window.alert("Se acabo el tiempo")
+				window.close()
+			}
+		</script>
+	</body>
+</html>
