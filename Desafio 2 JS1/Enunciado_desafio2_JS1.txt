@@ -1,4 +1,4 @@
-Enunciado de la tarea 2 de la sección 2699
+﻿Enunciado de la tarea 2 de la sección 2699
 
 Crear un archivo JS e incluirlo en un archivo HTML para Resolver el siguiente problema:
 
@@ -6,7 +6,7 @@ Una fabrica produce 3 tipos de franelas cuyos costos son:
 Tipo de Franela               Costo (Bs.)
          A                    25.000
          B                    50.000
-         C    		          68.900
+         C    		      68.900
 
 Para calcular el precio de venta, si el producto es nacional, tiene un recargo del 25% del costo, pero si es importado, tiene un recargo de 45% del costo. Además, la fábrica tiene la siguiente política de descuento:
 •	Si compra más de 2 docenas el descuento será del 15% del sub total.

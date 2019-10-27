@@ -28,7 +28,7 @@ function desafio1_1(){
 	console.log("cont desafio1:" +cont1);
 	if (cont1>1){
 		if(confirm("Ya se ejecuto esta funcion. Desea volver a hacerlo?")){
-			console.log("contador va en: " +cont1);
+			console.log("contador de desafio 1_1 va en: " +cont1);
 		}
 		else{
 			alert("HASTA LUEGO");
