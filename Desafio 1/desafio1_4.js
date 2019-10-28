@@ -1,3 +1,16 @@
+/*
+Crear un archivo nuevo JS para resolver el siguiente problema:
+Un kiosco de comida rápida desea procesar las ventas del día.
+ Para ello dispone de los siguientes datos: 
+ precio del desayuno, almuerzo y cena respectivamente 
+ y cantidad de desayunos, almuerzos y cenas vendidos 
+ durante el día. Elabore el programa que permita 
+ imprimir: ingreso del kiosco por cada tipo de comida 
+ (desayuno, almuerzo y cena), Total ingreso del día 
+ y promedio de los precios de las comidas.
+*/
+
+
 var des=prompt("Ingrese el costo del desayuno:");
 var numd=prompt("Ingrese el numero de desayunos vendidos:");
 var alm=prompt("Ingrese el costo del almuerzo:");

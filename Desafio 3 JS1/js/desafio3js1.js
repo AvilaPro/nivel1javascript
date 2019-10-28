@@ -352,7 +352,7 @@ function desafio1_2() {
 }
 
 function desafio1_3() {
-	func: do {
+	 
 		cont3 = cont3 + 1;
 		console.log("cont desafio3:" + cont3);
 		if (cont3 > 1) {
@@ -361,40 +361,42 @@ function desafio1_3() {
 			}
 			else {
 				alert("HASTA LUEGO");
-				console.log(cosssto);
+				return false; //con return false; se interrumpe el script perfectamente
 			}
 		}
-		n = parseInt(prompt("Ingrese el numero de clientes a los que se les hara sus calculos:"));
-		console.log("numero de estudiantes: " + n);
+	func:do{ 
+		n = prompt("Ingrese el numero de clientes a los que se atendera :");
+		console.log("numero de clientes: " + n);
 		if (n == null) {
-			if (confirm("Esta seguro que desea salir?")) {
-				alert("HASTA PRONTO");
-				console.log(cosssto);//Instruccion para generar error y hacer el break.
+		if (confirm("Esta seguro que desea salir?")) {
+					alert("HASTA PRONTO");
+					return false; //con return false; se interrumpe el script perfectamente.
+				}
+				else
+					continue func;
 			}
 			else
-				continue func;
-		}
-		else
-			if (n == "") {
-				alert("No debes dejar la casilla vacia");
-				continue func;
-			}
-			else
-				if (isNaN(n)) {
-					alert("Debes introducir un Numero");
+				if (n == "") {
+					alert("No debes dejar la casilla vacia");
 					continue func;
 				}
 				else
-					if (!isNaN(n))
-						c = c + 1;
+					if (isNaN(n)) {
+						alert("Debes introducir un Numero para poder continuar");
+						continue func;
+					}
+					else
+						if (!isNaN(n))
+							c = c + 1;
 	} while (c < 1)
+
 	for (i = 1; i <= n; i++) {
 		funca: do {
-			var cliente = prompt("Nombre del cliente " + n + " :");
+			var cliente = prompt("Nombre del "+n+ "° cliente :");
 			if (cliente == null) {
 				if (confirm("Esta seguro que desea salir?")) {
 					alert("HASTA PRONTO");
-					console.log(costo); //uso esta instruccion para que se cierre la compilacion.
+					return false; //con return false; se interrumpe el script perfectamente.
 				}
 				else
 					continue funca;
@@ -414,12 +416,12 @@ function desafio1_3() {
 							ca = ca + 1;
 		} while (ca < 1)
 		funcb: do {
-			costo = parseFloat(prompt("Ingrese el precio total del vehiculo:"));
-			console.log("cosot : " + costo);
+			cb= 0;
+			var costo = prompt("Ingrese el costo total del vehiculo:");
 			if (costo == null) {
 				if (confirm("Esta seguro que desea salir?")) {
 					alert("HASTA PRONTO");
-					console.log(cosssto);//Instruccion para generar error y hacer el break.
+					return false; //con return false; se interrumpe el script perfectamente
 				}
 				else
 					continue funcb;
@@ -431,20 +433,22 @@ function desafio1_3() {
 				}
 				else
 					if (isNaN(costo)) {
-						alert("Debes introducir un Numero");
+						alert("Debes introducir un Numero para poder continuar");
 						continue funcb;
 					}
 					else
-						if (!isNaN(costo))
+						if (!isNaN(n)){
+							costo = parseFloat(costo);
 							cb = cb + 1;
+						}							
 		} while (cb < 1)
-		inicial = costo * 0.3;
-		resto = (costo - inicial) / 24;
-		console.log("cliente: " + cliente)
-		console.log("costo: " + costo)
-		console.log("inicial: " + inicial)
-		console.log("resto a pagar: " + resto)
-		alert("El cliente: " + cliente + " tendra una cuota inicial del vehiculo igual de: " + inicial + " y cuotas mensuales por 2 anos de: " + resto);
+		var inicial = costo * 0.3;
+		var resto = (costo - inicial) / 24;
+		console.log("a. Nombre del cliente: " + cliente)
+		console.log("costo total del vehiculo: " + costo)
+		console.log("b. Cuota inicial: " + inicial)
+		console.log("c. Monto de las cuotas mensuales: " + resto)
+		alert("El cliente: " + cliente + " tendra una cuota inicial del vehiculo igual de: " + inicial + "\n\n y cuotas mensuales por 2 anos de: " + resto);
 	}
 }
 
