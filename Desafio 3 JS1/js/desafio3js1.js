@@ -13,6 +13,7 @@ var cb = 0;
 var da = 0;
 var db = 0;
 var dc = 0;
+var dd = 0;
 var de = 0;
 var df = 0;
 var dg = 0;
@@ -437,7 +438,7 @@ function desafio1_3() {
 						continue funcb;
 					}
 					else
-						if (!isNaN(n)){
+						if (!isNaN(costo)){
 							costo = parseFloat(costo);
 							cb = cb + 1;
 						}							
@@ -463,18 +464,17 @@ function desafio1_4() {
 		}
 		else {
 			alert("HASTA LUEGO");
-			console.log(cosssto);
+			return false; //con return false; se interrumpe el script perfectamente
 		}
 	}
 	for (i = 1; i <= n; i++) {
 		funda: do {
-			da = 0;
-			des = parseFloat(prompt("Ingrese el costo del desayuno:"));
-			console.log("costo del desayuno : " + des);
+			da= 0;
+			var des = prompt("Ingrese el costo total del desayuno:");
 			if (des == null) {
 				if (confirm("Esta seguro que desea salir?")) {
 					alert("HASTA PRONTO");
-					console.log(cosssto);//Instruccion para generar error y hacer el break.
+					return false; //con return false; se interrumpe el script perfectamente
 				}
 				else
 					continue funda;
@@ -486,21 +486,22 @@ function desafio1_4() {
 				}
 				else
 					if (isNaN(des)) {
-						alert("Debes introducir un Numero");
+						alert("Debes introducir un Numero para poder continuar");
 						continue funda;
 					}
 					else
-						if (!isNaN(des))
+						if (!isNaN(des)){
+							des = parseFloat(des);
 							da = da + 1;
+						}							
 		} while (da < 1)
 		fundb: do {
-			db = 0;
-			numd = parseFloat(prompt("Ingrese el numero de desayunos vendidos:"));
-			console.log("num desay vendidos : " + numd);
+			db= 0;
+			var numd = prompt("Ingrese el numero de desayunos vendidos:");
 			if (numd == null) {
 				if (confirm("Esta seguro que desea salir?")) {
 					alert("HASTA PRONTO");
-					console.log(cosssto);//Instruccion para generar error y hacer el break.
+					return false; //con return false; se interrumpe el script perfectamente
 				}
 				else
 					continue fundb;
@@ -512,21 +513,22 @@ function desafio1_4() {
 				}
 				else
 					if (isNaN(numd)) {
-						alert("Debes introducir un Numero");
+						alert("Debes introducir un Numero para poder continuar");
 						continue fundb;
 					}
 					else
-						if (!isNaN(numd))
+						if (!isNaN(numd)){
+							numd = parseFloat(numd);
 							db = db + 1;
+						}							
 		} while (db < 1)
 		fundc: do {
-			dc = 0;
-			alm = parseFloat(prompt("Ingrese el costo del almuerzo:"));
-			console.log("costo almuerzo : " + alm);
+			dc= 0;
+			var alm = prompt("Ingrese el costo total del almuerzo:");
 			if (alm == null) {
 				if (confirm("Esta seguro que desea salir?")) {
 					alert("HASTA PRONTO");
-					console.log(cosssto);//Instruccion para generar error y hacer el break.
+					return false; //con return false; se interrumpe el script perfectamente
 				}
 				else
 					continue fundc;
@@ -538,111 +540,117 @@ function desafio1_4() {
 				}
 				else
 					if (isNaN(alm)) {
-						alert("Debes introducir un Numero");
+						alert("Debes introducir un Numero para poder continuar");
 						continue fundc;
 					}
 					else
-						if (!isNaN(alm))
+						if (!isNaN(alm)){
+							alm = parseFloat(alm);
 							dc = dc + 1;
+						}							
 		} while (dc < 1)
-		funde: do {
-			de = 0;
-			numa = parseFloat(prompt("Ingrese el numero de almuerzos vendidos:"));
-			console.log("num almuerz vendidos : " + numa);
+		fundd: do {
+			dd= 0;
+			var numa = prompt("Ingrese el numero de almuerzos vendidos:");
 			if (numa == null) {
 				if (confirm("Esta seguro que desea salir?")) {
 					alert("HASTA PRONTO");
-					console.log(cosssto);//Instruccion para generar error y hacer el break.
+					return false; //con return false; se interrumpe el script perfectamente
 				}
 				else
-					continue funde;
+					continue fundd;
 			}
 			else
 				if (numa == "") {
 					alert("No debes dejar la casilla vacia");
-					continue funde;
+					continue fundd;
 				}
 				else
 					if (isNaN(numa)) {
-						alert("Debes introducir un Numero");
-						continue funde;
+						alert("Debes introducir un Numero para poder continuar");
+						continue fundd;
 					}
 					else
-						if (!isNaN(numa))
-							de = de + 1;
-		} while (de < 1)
-		fundf: do {
-			df = 0;
-			cen = parseFloat(prompt("Ingrese el costo de la cena:"));
-			console.log("cosoto cena : " + cen);
+						if (!isNaN(numa)){
+							numa = parseFloat(numa);
+							dd = dd + 1;
+						}							
+		} while (dd < 1)
+		funde: do {
+			de= 0;
+			var cen = prompt("Ingrese el costo total de la cena:");
 			if (cen == null) {
 				if (confirm("Esta seguro que desea salir?")) {
 					alert("HASTA PRONTO");
-					console.log(cosssto);//Instruccion para generar error y hacer el break.
+					return false; //con return false; se interrumpe el script perfectamente
 				}
 				else
-					continue fundf;
+					continue funde;
 			}
 			else
 				if (cen == "") {
 					alert("No debes dejar la casilla vacia");
-					continue fundf;
+					continue funde;
 				}
 				else
 					if (isNaN(cen)) {
-						alert("Debes introducir un Numero");
-						continue fundf;
+						alert("Debes introducir un Numero para poder continuar");
+						continue funde;
 					}
 					else
-						if (!isNaN(cen))
-							df = df + 1;
-		} while (df < 1)
-		fundg: do {
-			dg = 0;
-			numc = parseFloat(prompt("Ingrese el numero de cenas vendidos:"));
-			console.log("num cenas vendidos : " + numc);
+						if (!isNaN(cen)){
+							cen = parseFloat(cen);
+							de = de + 1;
+						}							
+		} while (de < 1)
+		fundf: do {
+			df= 0;
+			var numc = prompt("Ingrese el numero de almuerzos vendidos:");
 			if (numc == null) {
 				if (confirm("Esta seguro que desea salir?")) {
 					alert("HASTA PRONTO");
-					console.log(cosssto);//Instruccion para generar error y hacer el break.
+					return false; //con return false; se interrumpe el script perfectamente
 				}
 				else
-					continue fundg;
+					continue fundf;
 			}
 			else
 				if (numc == "") {
 					alert("No debes dejar la casilla vacia");
-					continue fundg;
+					continue fundf;
 				}
 				else
 					if (isNaN(numc)) {
-						alert("Debes introducir un Numero");
-						continue fundg;
+						alert("Debes introducir un Numero para poder continuar");
+						continue fundf;
 					}
 					else
-						if (!isNaN(numc))
-							dg = dg + 1;
-		} while (dg < 1)
-		ingd = des * numd;
-		inga = alm * numa;
-		ingc = cen * numc;
-		total = ingd + inga + ingc;
-		prom = (des + alm + cen) / 3;
-		console.log(des);
-		console.log(numd);
-		console.log(alm);
-		console.log(numa);
-		console.log(cen);
-		console.log(numc);
+						if (!isNaN(numc)){
+							numc = parseFloat(numc);
+							df = df + 1;
+						}							
+		} while (df < 1)
+		var ingd = des * numd;
+		var inga = alm * numa;
+		var ingc = cen * numc;
+		var total4 = ingd + inga + ingc;
+		var prom = (des + alm + cen) / 3;
+		console.log("costo del desayuno: "+des);
+		console.log("numero de desayunos vendidos: "+numd);
+		console.log("costo del almuerzo: "+alm);
+		console.log("numero de almuerzos vendidos: "+numa);
+		console.log("costp de la cena: "+cen);
+		console.log("numero de censa vendidas: "+numc);
 		console.log("ingreso desayuno: " + ingd);
 		console.log("ingreso almuerzo: " + inga);
 		console.log("ingreso cena: " + ingc);
-		console.log("total: " + total);
-		console.log("promedio: " + prom);
-		alert("El ingreso por desayunos es: " + ingd + " BsS");
-		alert("El ingreso por almuerzos es: " + inga + " BsS");
-		alert("El ingreso por cenas es: " + ingc + " BsS");
-		alert("El total de ingreso del dia es de: " + total + " BsS");
-		alert("El promedio de los precios de las comidas es de: " + prom);
+		console.log("total de ingresos: " + total4);
+		console.log("promedio del total de ingresos: " + prom);
+		alert("El ingreso por desayunos es: " + ingd + " BsS"+
+		"\nEl ingreso por almuerzos es: " + inga + " BsS"+
+		"\nEl ingreso por cenas es: " + ingc + " BsS"+
+		"\n\nEl total de ingreso del dia es de: " + total4 + " BsS"+
+		"\n\nEl promedio de los precios de las comidas es de: " + prom + " BsS"	
+		);
 	}
 }
