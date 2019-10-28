@@ -91,7 +91,7 @@ function desafio1_1() {
 							aa = aa + 1;
 						}
 		} while (aa < 1)
-		var subtotal = num * 200000;
+		
 		funab: do {
 			ab = 0;
 			var valor_total = parseFloat(prompt("Ingrese el valor total de ventas que hizo " + nombre + " :"));
@@ -133,7 +133,7 @@ function desafio1_1() {
 
 
 function desafio1_2() {
-	funb: do {
+	 
 		cont2 = cont2 + 1;
 		console.log("cont desafio2:" + cont2);
 		if (cont2 > 1) {
@@ -142,15 +142,16 @@ function desafio1_2() {
 			}
 			else {
 				alert("HASTA LUEGO");
-				console.log(cosssto);
+				return false; //con return false; se interrumpe el script perfectamente.
 			}
 		}
-		n = parseInt(prompt("Ingrese el numero de estudiantes a los que se le evaluara el promedio:"));
+	funb:do{ 
+		n = prompt("Ingrese el numero de estudiantes a los que se le evaluara el promedio:");
 		console.log("numero de estudiantes: " + n);
 		if (n == null) {
 			if (confirm("Esta seguro que desea salir?")) {
 				alert("HASTA PRONTO");
-				console.log(cosssto);//Instruccion para generar error y hacer el break.
+				return false; //con return false; se interrumpe el script perfectamente.
 			}
 			else
 				continue funb;
@@ -171,156 +172,171 @@ function desafio1_2() {
 	} while (b < 1)
 	for (i = 1; i <= n; i++) {
 		funba: do {
-			nota1 = parseFloat(prompt("Ingrese la nota del segundo examen parcial (x/27):"));
-			console.log("nota 1 : " + nota1);
-			if (nota1 < 0 || nota1 > 27) {
-				alert("Debes intriducir una nota entre 0 y 27");
-				continue funba;
-			}
-			else
-				if (nota1 == null) {
-					if (confirm("Esta seguro que desea salir?")) {
-						alert("HASTA PRONTO");
-						console.log(cosssto);//Instruccion para generar error y hacer el break.
-					}
-					else
-						continue funba;
+			ba= 0;
+			var nota1 = prompt("Ingrese la nota del primer (1er) examen parcial (x/27):");
+			if (nota1 == null) {
+				if (confirm("Esta seguro que desea salir?")) {
+					alert("HASTA PRONTO");
+					return false; //con return false; se interrumpe el script perfectamente
 				}
 				else
-					if (nota1 == "") {
-						alert("No debes dejar la casilla vacia");
+					continue funba;
+			}
+			else
+				if (nota1 == "") {
+					alert("No debes dejar la casilla vacia");
+					continue funba;
+				}
+				else
+					if (isNaN(nota1)) {
+						alert("Debes introducir un Numero para poder continuar");
 						continue funba;
 					}
 					else
-						if (isNaN(nota1)) {
-							alert("Debes introducir un Numero");
-							continue funba;
-						}
-						else
-							if (!isNaN(nota1))
+						if (!isNaN(nota1)) {
+							if (nota1 < 0 || nota1 > 27) {
+								alert("Debes introducir una nota entre 0 y 27 para continuar");
+								continue funba;
+							}
+							else{
+								nota1 = parseFloat(nota1);
 								ba = ba + 1;
-		} while (ba < 1)
+							}
+						}
+		} while (ba < 1) 
 		fb: do {
-			nota2 = parseFloat(prompt("Ingrese la nota del segundo examen parcial (x/27):"));
-			console.log("nota 2 : " + nota2);
-			if (nota2 < 0 || nota2 > 27) {
-				alert("Debes intriducir una nota entre 0 y 27");
-				continue fb;
-			}
-			else
-				if (nota2 == null) {
-					if (confirm("Esta seguro que desea salir?")) {
-						alert("HASTA PRONTO");
-						console.log(cosssto);//Instruccion para generar error y hacer el break.
-					}
-					else
-						continue fb;
+			bb= 0;
+			var nota2 = prompt("Ingrese la nota del segundo (2do) examen parcial (x/27):");
+			if (nota2 == null) {
+				if (confirm("Esta seguro que desea salir?")) {
+					alert("HASTA PRONTO");
+					return false; //con return false; se interrumpe el script perfectamente
 				}
 				else
-					if (nota2 == "") {
-						alert("No debes dejar la casilla vacia");
+					continue fb;
+			}
+			else
+				if (nota2 == "") {
+					alert("No debes dejar la casilla vacia");
+					continue fb;
+				}
+				else
+					if (isNaN(nota2)) {
+						alert("Debes introducir un Numero para poder continuar");
 						continue fb;
 					}
 					else
-						if (isNaN(nota2)) {
-							alert("Debes introducir un Numero");
-							continue fb;
-						}
-						else
-							if (!isNaN(nota2))
+						if (!isNaN(nota2)) {
+							if (nota2 < 0 || nota2 > 27) {
+								alert("Debes introducir una nota entre 0 y 27 para continuar");
+								continue fb;
+							}
+							else{
+								nota2 = parseFloat(nota2);
 								bb = bb + 1;
-		} while (bb < 1)
+							}
+						}
+		} while (bb < 1) 
 		funbc: do {
-			nota3 = parseFloat(prompt("Ingrese la nota del segundo examen parcial (x/27):"));
-			console.log("nota 3 : " + nota3);
-			if (nota3 < 0 || nota3 > 27) {
-				alert("Debes intriducir una nota entre 0 y 27");
-				continue funbc;
-			}
-			else
-				if (nota3 == null) {
-					if (confirm("Esta seguro que desea salir?")) {
-						alert("HASTA PRONTO");
-						console.log(cosssto);//Instruccion para generar error y hacer el break.
-					}
-					else
-						continue funbc;
+			bc= 0;
+			var nota3 = prompt("Ingrese la nota del tercer (3er) examen parcial (x/27):");
+			if (nota3 == null) {
+				if (confirm("Esta seguro que desea salir?")) {
+					alert("HASTA PRONTO");
+					return false; //con return false; se interrumpe el script perfectamente
 				}
 				else
-					if (nota3 == "") {
-						alert("No debes dejar la casilla vacia");
+					continue funbc;
+			}
+			else
+				if (nota3 == "") {
+					alert("No debes dejar la casilla vacia");
+					continue funbc;
+				}
+				else
+					if (isNaN(nota3)) {
+						alert("Debes introducir un Numero para poder continuar");
 						continue funbc;
 					}
 					else
-						if (isNaN(nota3)) {
-							alert("Debes introducir un Numero");
-							continue funbc;
-						}
-						else
-							if (!isNaN(nota3))
+						if (!isNaN(nota3)) {
+							if (nota3 < 0 || nota3 > 27) {
+								alert("Debes introducir una nota entre 0 y 27 para continuar");
+								continue funbc;
+							}
+							else{
+								nota3 = parseFloat(nota3);
 								bc = bc + 1;
-		} while (bc < 1)
+							}
+						}
+		} while (bc < 1) 
 		funbd: do {
-			evalcont = parseFloat(prompt("Ingrese la nota del segundo examen parcial (x/9):"));
-			console.log("evaluacion continua : " + evalcont);
-			if (evalcont < 0 || evalcont > 9) {
-				alert("Debes intriducir una nota entre 0 y 9");
-				continue funbd;
-			}
-			else
-				if (evalcont == null) {
-					if (confirm("Esta seguro que desea salir?")) {
-						alert("HASTA PRONTO");
-						console.log(cosssto);//Instruccion para generar error y hacer el break.
-					}
-					else
-						continue funbd;
+			bd= 0;
+			var evalcont = prompt("Ingrese la nota de la evaluacion continua (x/9):");
+			if (evalcont == null) {
+				if (confirm("Esta seguro que desea salir?")) {
+					alert("HASTA PRONTO");
+					return false; //con return false; se interrumpe el script perfectamente
 				}
 				else
-					if (evalcont == "") {
-						alert("No debes dejar la casilla vacia");
+					continue funbd;
+			}
+			else
+				if (evalcont == "") {
+					alert("No debes dejar la casilla vacia");
+					continue funbd;
+				}
+				else
+					if (isNaN(evalcont)) {
+						alert("Debes introducir un Numero para poder continuar");
 						continue funbd;
 					}
 					else
-						if (isNaN(evalcont)) {
-							alert("Debes introducir un Numero");
-							continue funbd;
-						}
-						else
-							if (!isNaN(evalcont))
+						if (!isNaN(evalcont)) {
+							if (evalcont < 0 || evalcont > 9) {
+								alert("Debes introducir una nota entre 0 y 9 para continuar");
+								continue funbd;
+							}
+							else{
+								evalcont = parseFloat(evalcont);
 								bd = bd + 1;
-		} while (bd < 1)
+							}
+						}
+		} while (bd < 1) 
 		funbe: do {
-			trabpract = parseFloat(prompt("Ingrese la nota del segundo examen parcial (x/10):"));
-			console.log("trabajo practico : " + trabpract);
-			if (trabpract < 0 || trabpract > 10) {
-				alert("Debes introducir una nota entre 0 y 10");
-				continue funbe;
-			}
-			else
-				if (trabpract == null) {
-					if (confirm("Esta seguro que desea salir?")) {
-						alert("HASTA PRONTO");
-						console.log(cosssto);//Instruccion para generar error y hacer el break.
-					}
-					else
-						continue funbe;
+			be= 0;
+			var trabpract = prompt("Ingrese la nota del trabajo practico (x/10):");
+			if (trabpract == null) {
+				if (confirm("Esta seguro que desea salir?")) {
+					alert("HASTA PRONTO");
+					return false; //con return false; se interrumpe el script perfectamente
 				}
 				else
-					if (trabpract == "") {
-						alert("No debes dejar la casilla vacia");
+					continue funbe;
+			}
+			else
+				if (trabpract == "") {
+					alert("No debes dejar la casilla vacia");
+					continue funbe;
+				}
+				else
+					if (isNaN(trabpract)) {
+						alert("Debes introducir un Numero para poder continuar");
 						continue funbe;
 					}
 					else
-						if (isNaN(trabpract)) {
-							alert("Debes introducir un Numero");
-							continue funbe;
-						}
-						else
-							if (!isNaN(trabpract))
+						if (!isNaN(trabpract)) {
+							if (trabpract < 0 || trabpract > 10) {
+								alert("Debes introducir una nota entre 0 y 10 para continuar");
+								continue funbe;
+							}
+							else{
+								trabpract = parseFloat(trabpract);
 								be = be + 1;
-		} while (be < 1)
-		notafinal = nota1 + nota2 + nota3 + evalcont + trabpract;
+							}
+						}
+		} while (be < 1) 
+		notafinal = (nota1+nota2+nota3+evalcont+trabpract);
 		base20 = (notafinal * 20) / 100;
 		base4 = (notafinal * 4) / 100;
 		console.log(nota1)
@@ -331,7 +347,7 @@ function desafio1_2() {
 		console.log("nota final base 100: " + notafinal)
 		console.log("nota final base 20: " + base20)
 		console.log("nota final base 4: " + base4)
-		alert("la nota final del estudiante en escala de 100pts es " + notafinal + " la nota en escala de 20pts es " + base20 + " y la nota en base 4 es " + base4);
+		alert("la nota final del estudiante en escala de 100pts es " + notafinal + "\n\n la nota en escala de 20pts es " + base20 + "\n\n y la nota en base 4 es " + base4);
 	}
 }
 
