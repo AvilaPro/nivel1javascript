@@ -33,7 +33,7 @@ function desafio1_1() {
 		}
 		else {
 			alert("HASTA LUEGO");
-			console.log(cosssto);
+			return false; //con return false; se interrumpe el script perfectamente
 		}
 	}
 	for (i = 1; i <= n; i++) {
@@ -71,7 +71,7 @@ function desafio1_1() {
 			if (num == null) {
 				if (confirm("Esta seguro que desea salir?")) {
 					alert("HASTA PRONTO");
-					return false;
+					return false; //con return false; se interrumpe el script perfectamente
 				}
 				else
 					continue funaa;
@@ -98,7 +98,7 @@ function desafio1_1() {
 			if (valor_total == null) {
 				if (confirm("Esta seguro que desea salir?")) {
 					alert("HASTA PRONTO");
-					console.log(cossto); //uso esta instruccion para que se cierre la compilacion.
+					return false; //con return false; se interrumpe el script perfectamente.
 				}
 				else
 					continue funab;
