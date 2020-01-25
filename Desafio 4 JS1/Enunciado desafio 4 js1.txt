@@ -2,12 +2,20 @@ Enunciado de la tarea 4 de la sección 2699
 
 Abrir la imagen adjunta para realizar las siguientes actividades:
 
-1.- Crear en un archivo con el nombre ventanas.js una función con el nombre "abrirVentana" que reciba 4 parámetros: X (posición X de la ventana),Y (posición Y de la ventana),W (ancho de la ventana),H (alto de la ventana), para cambiar el tamaño y la posición de una ventana utilizando estos parámetros
+1.- Crear en un archivo con el nombre ventanas.js una función con el nombre "abrirVentana" que reciba 4 parámetros: 
+X (posición X de la ventana),Y (posición Y de la ventana),W (ancho de la ventana),H (alto de la ventana), para cambiar el tamaño y 
+la posición de una ventana utilizando estos parámetros
 
-2.- En el archivo ventanas.js crear otra función con el nombre "derecha()", que utilizando la función "abrirVentana" cambie el tamaño y la posición de la ventana de modo que ocupe el cuadrante superior derecho de la pantalla (hacer los cálculos de la posición (x,y), ancho y alto utilizando screen.availHeight y screen.availWidth).
+2.- En el archivo ventanas.js crear otra función con el nombre "derecha()", que utilizando la función "abrirVentana" 
+cambie el tamaño y la posición de la ventana de modo que ocupe el cuadrante superior derecho de la pantalla 
+(hacer los cálculos de la posición (x,y), ancho y alto utilizando screen.availHeight y screen.availWidth).
 
-3.- Crear un archivo "index.html" que contenga un hipervínculo. Programar en el click de ese hipervínculo que se le pida al usuario un número (validar el número leído sea valido). Cuando el usuario introduzca el número, abrir otro archivo con el nombre "info.html" en una ventana aparte, la ventana debe abrirse tantas veces según el número introducido por el usuario
+3.- Crear un archivo "index.html" que contenga un hipervínculo. Programar en el click de ese hipervínculo 
+que se le pida al usuario un número (validar el número leído sea valido). Cuando el usuario introduzca el número, 
+abrir otro archivo con el nombre "info.html" en una ventana aparte, la ventana debe abrirse tantas veces según el número introducido por el usuario
 
-4.- Programar que al abrirse la página "info.html" la ventana se ubique automáticamente en el cuadrante superior derecho (usando la función creada en el objetivo 2 de este desafío)
+4.- Programar que al abrirse la página "info.html" la ventana se ubique automáticamente en el cuadrante 
+superior derecho (usando la función creada en el objetivo 2 de este desafío)
 
-5.- Programar que al transcurrir 3 segundos de abrirse la ventana, se maximice y se ubique en la posición (0,0) de la pantalla (utilizando la función creada en el objetivo 1 de este desafío) y luego se cierre
+5.- Programar que al transcurrir 3 segundos de abrirse la ventana, se maximice y se ubique en la posición 
+(0,0) de la pantalla (utilizando la función creada en el objetivo 1 de este desafío) y luego se cierre
