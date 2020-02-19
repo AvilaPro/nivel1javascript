@@ -1,0 +1,17 @@
+Una empresa de viajes aéreos necesita registrar la cantidad de pasajeros que han comprado boletos en un día de trabajo para ello necesita registrar los datos del pasajero y poder mostrar el resultado de la compra y vuelo del pasajero en la consola.
+Los destinos disponibles con su precio son: 
+1– Aruba. Precio: 25000bs
+2- México. Precio: 45700bs.
+3- Miami. Precio: 50000bs.
+4– Londres. Precio: 140000bs.
+5- Suiza. Precio 220000bs.
+
+1.- Leer con prompt el Nombre, cédula, genero ([F]emenino/[M]asculino) y lugar de destino de un pasajero. Para cada dato de entrada, crear una funcion que valide que los campos ingresados no esten vacíos o que el usuario se escape de escribirlo presionando el boton "Cancelar" y la cédula tiene que ser un numero valido
+
+2.- Dependiendo de sus datos, los pasajeros obtendrán descuento o impuestos sobre su vuelo: - si es femenino se le aplica un descuento del 15%, sino, si es masculino se le aplica un descuento del 10% sobre el precio del vuelo - si su lugar de destino es (4) Inglaterra o (5) Suiza se le aplica un impuesto del 5% del precio del vuelo + 10000bs. - Si su cédula es un numero par obtendrán un descuento de 1500 bs., sino, si su cédula es impar tendrán un impuesto de 3000bs.
+
+3.- Crear una funcion que lea los datos ingresados por el usuario junto a su destino, y luego muestre con alert y console.log los siguientes datos: Nombre del usuario Nombre del destino escogido
+
+4.- Crear una funcion que muestre con alerts el total de pasajeros registrados y el total de ingresos de la agencia de vuelos, junto al promedio de ingreso. (la suma de cada total en cada iteración es del total con todos los descuentos e impuesto aplicados).
+
+5.- Colocar en el HTML 2 hipervinculos, uno que le permita al usuario registrar un pasajero y otro que le permita al usuario conocer el resumen del total de pasajeros y de ingresos de la agencia
